@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+$width-desktop: 980px;
+$width-ipad-landscape: 1024px;
+$width-ipad-portrait: 768px;
+
+$width-mobile: 500px;
+
+//desktop
+@media screen and (max-width: $width-desktop) {
+ 
+}
+
+//tablet
+@media only screen and (min-width: $width-mobile + 1) and (max-width: $width-desktop - 1) {
+  .wrapper {
+    width: 800px;
+  }
+  .cube-form {
+    width: 60%;
+  }
+  .cube-profile {
+    
+  }
+}  
+
+//mobile 
+@media only screen and (max-width: $width-mobile) {
+  .profile {
+    float: none;
+  }
+  .cube-profile {
+     width: 100%;
+     margin-top: 40px;
+  }
+  .cube-form {
+     float: none;
+     width: 100%;
+     margin-top: 40px;
+     margin-left: 0;
+  }
+  .wrapper {
+    width: 480px;
+  }
+}
+

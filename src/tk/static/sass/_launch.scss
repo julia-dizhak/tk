@@ -1,0 +1,307 @@
+@charset "utf-8";
+
+.cube-inner {  
+  background-color: #FFFFFF;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 47px 29px -27px rgba(146, 161, 173, 0.9);
+  height: 100%;
+  position: relative;
+  @include transition(margin-top 0.5s ease 0s);
+  width: 100%;
+}
+.cube-cover { 
+  height: 100%;
+  opacity: 0.7;
+  position: absolute;
+  width: 100%;
+}
+.cube-shadow {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  box-shadow: -14px 0 7px -2px rgba(0, 0, 0, 0.2) inset;
+}
+.cube-border {
+  display: block;
+  border-bottom: 11px solid #D3D9DC;
+  border-left: 18px dashed rgba(0, 0, 0, 0);
+  border-right: 18px dashed rgba(0, 0, 0, 0);
+  position: relative;
+  &:after {
+    box-shadow: 0 -4px 4px 1px rgba(255, 255, 255, 0.4);
+    content: "";
+    height: 1px;
+    left: -3%;
+    position: absolute;
+    top: 10px;
+    width: 106%;
+  }
+}
+
+.cube-profile {
+  display: block;
+  height: 180px;
+  position: relative;
+  z-index: 1;
+  width: 200px;
+ 
+  
+  /*&:hover {
+    cursor: default;
+  }*/
+  
+  .cube-data {
+     text-align: center;
+    padding: 30px 15px 10px;
+  }
+  .cube-inner {
+    background: none repeat scroll 0 0 #94CD4C;
+    @include background-image(linear-gradient(left top,#94CD4C,lighten(#94CD4C, 5%)));
+    
+    /*&:hover {
+        margin-top: -15px;
+    }*/
+  }
+  .cube-border {
+     top: -165px;
+  }
+}
+
+.cube-form {
+  float: left;
+  margin-left: 30px;
+  margin-top: -23px;
+  width: 700px;
+  position: relative;
+  z-index: 2;
+  .cube-inner {
+      background: #fff;
+      box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }  
+  .cube-border {
+     top: -271px;
+  }  
+  .cube-shadow {
+    box-shadow: 14px 0 7px -2px rgba(0, 0, 0, 0.2) inset, -14px 0 7px -2px rgba(0, 0, 0, 0.2) inset;
+  }
+}
+
+.launch {
+  .cube1 {
+    display: block;
+    margin-top: 33px;
+        height: 200px;
+        position: relative;
+        z-index:1;
+        width: 248px;
+        &:hover {
+          cursor: default;
+        }
+    .cube-text {
+      color: #FFFFFF;
+        
+         font-weight: bold;
+         left: 4px;
+         position: absolute;
+
+         top: 67px;
+         h1 {
+           color: #fff;
+           font-size: 3.6em;
+         }
+    }
+    .cube-inner {
+        background: none repeat scroll 0 0 #94CD4C;
+        @include background-image(linear-gradient(left top,#94CD4C,lighten(#94CD4C, 5%)));
+        &:hover {
+          margin-top: -15px;
+        }
+    }
+  }
+  .cube2 {
+    display: block;
+    height: 340px;
+    left: 211px;
+    position: absolute;
+    top: -58px;
+    width: 345px;
+    z-index: 3;
+    &:hover {
+      cursor: default;
+    }
+    .cube-text {
+      color: #FFFFFF;
+      font-weight: 100;
+      left: 12px;
+      position: absolute;
+      right: 24px;
+      top: 32px;
+      width: 309px;
+         p {
+            font-family: "Lobster",'Helvetica', Arial, Sans-serif;   
+             font-size: 2.2em;
+           margin: 0 0 24px 0;
+           strong {
+             cursor: pointer;
+             border-bottom: 1px solid #fff;
+             &:hover {
+               border-bottom: 1px solid rgba(0,0,0,0);
+             }
+           }
+         }
+    }
+    .cube-inner {
+      background: #0066CC;
+      @include background-image(linear-gradient(left top,#0066CC,lighten(#0066CC, 25%)));
+      
+       // background: none repeat scroll 0 0 #0066CC;
+        &:hover {
+          margin-top: -15px;
+        }
+    }
+  }
+  .cube3 {
+    display: block;
+       height: 222px;
+       left: 475px;
+       position: absolute;
+       top: -12px;
+       width: 326px;
+       z-index: 2;
+    .cube-text {
+         left: 95px;
+         position: absolute;
+         top: 16px;
+    }
+    .cube-inner {
+        background: #fff;
+        &:hover {
+          margin-top: -15px;
+        }
+    }
+  }
+}
+
+
+.launch {
+  .cube-inner {  
+    background-color: #FFFFFF;
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 0 47px 29px -27px rgba(146, 161, 173, 0.9);
+        height: 100%;
+        position: absolute;
+        @include transition(margin-top 0.5s ease 0s);
+        width: 100%;
+  }
+  .cube-cover {
+     
+    height: 100%;
+       opacity: 0.7;
+       position: absolute;
+       width: 100%;
+  }
+  .cube-shadow {
+     
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      box-shadow: -14px 0 7px -2px rgba(0, 0, 0, 0.2) inset;
+  }
+  .cube-border {
+     display: block;
+    border-bottom: 11px solid #D3D9DC;
+        border-left: 18px dashed rgba(0, 0, 0, 0);
+        border-right: 18px dashed rgba(0, 0, 0, 0);
+        position: relative;
+        top: -11px;
+        &:after {
+          box-shadow: 0 -4px 4px 1px rgba(255, 255, 255, 0.4);
+              content: "";
+              height: 1px;
+              left: -3%;
+              position: absolute;
+              top: 10px;
+              width: 106%;
+        }
+  }
+
+}
+
+.launch {
+  .btn-project-create {
+    background: none repeat scroll 0 0 #94CD4C;
+     border-radius: 12px 12px 12px 12px;
+     box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4);
+     color: #FFFFFF;
+     display: inline-block;
+     font-size: 1.3em;
+     font-weight: 600;
+     line-height: 1;
+     padding: 8px 35px;
+     position: relative;
+     text-align: center;
+     text-transform: uppercase;
+     vertical-align: middle;
+     margin: 36px 0 0 0;
+  
+  }
+  input[type="text"] {
+    @include input-placeholder(#000);
+    color: #000;
+    background: #fff;
+    display: block;
+    @include box-sizing(border-box);
+    font-size: 1.4em;
+    line-height: 1;
+     margin: 0 0 10px 0;
+      box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5) inset;
+       background: none repeat scroll 0 0 #FFFFFF;
+       border-radius: 10px 10px 10px 10px;
+       padding: 7px 12px;
+       width: 100%;
+  }
+
+  form {
+    label {
+      color: #000000;
+        display: block;
+        font-size: 1.6em;
+        margin: 0 0 2px;
+    }
+  }
+}
+
+.launch-footer {
+  @include background-image(linear-gradient(left top,#0066CC,lighten(#0066CC, 25%)));
+  position: absolute;
+  left: -61px;
+  top: 38px;
+  width: 254px;
+   @include transform(rotate(-45deg));
+    text-align: center;
+  p {
+    color: #FFFFFF;
+       font-size: 1.5em;
+       padding: 7px 0 2px;
+       text-align: center;
+       
+  }
+  span {
+    color: #FFFFFF;
+        display: block;
+        font-size: 1.2em;
+        font-style: italic;
+        margin: 0 0 1px;
+        a {
+          color: #fff;
+        }
+        &:last-child {
+          margin: 0 0 3px;
+        }
+  }
+  
+}

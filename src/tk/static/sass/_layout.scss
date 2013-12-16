@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+// MAIN LAYOUT
+.layout-left {
+  @extend %left;
+}
+.layout-right {
+  @extend %right;
+}
+.layout-main {
+  @include clearfix; 
+  .layout-left {
+ 
+  }
+  .layout-right {
+   
+  }
+}
+.col {
+  float: left;
+}
+.col10 {
+  width: 10%;
+}
+.col15 {
+  width: 15%;
+}  
+.col20 {
+  width: 20%;
+}
+.col30 {
+  width: 30%;
+} 
+.col35 {
+  width: 35%;
+} 
+.col50 {
+  width: 50%;
+}
+.col60 {
+  width: 60%;
+}
+.col70 {
+  width: 70%;
+}
+.col80 {
+  width: 80%;
+}
+.col85 {
+  width: 85%;
+} 
+.col90 {
+  width: 90%;
+}
+
+.task-layout {
+  @include clearfix; 
+
+}

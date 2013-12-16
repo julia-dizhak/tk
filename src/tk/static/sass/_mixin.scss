@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+//CLEARFIX
+%clearfix {
+  &:before, &:after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      overflow: hidden;
+  }
+  &:after {
+      clear: both;
+  }
+}
+@mixin clearfix {
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
+.cf {
+	@include clearfix;
+}
+
+//IMAGE
+@mixin image($name,$pos-left:0,$pos-top:0) {
+	position: relative;
+	&:after {
+		position: absolute;
+		content: '';
+    left: $pos-left;
+    top: $pos-top;
+
+		@include icons-sprite($name);
+		width: icons-sprite-width($name);
+		height: icons-sprite-height($name);
+	}
+}
+@mixin image-hover($name,$pos-left:0,$pos-top:0) {
+	&:hover {
+  	&:after {
+  		position: absolute;
+  		content: '';
+      left: $pos-left;
+      top: $pos-top;
+
+  		@include icons-sprite($name);
+  		width: icons-sprite-width($name);
+  		height: icons-sprite-height($name);
+  	}
+	}
+}
+
+//PLACEHOLDER
+@mixin input-placeholder($color) {
+  &.placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+}
+@mixin unselectable() {
+    -webkit-touch-callout : none;
+    -webkit-user-select   : none;
+    -khtml-user-select    : none;
+    -moz-user-select      : none;
+    -ms-user-select       : none;
+    user-select           : none;
+}
+@mixin prevent-text(){
+   -ms-word-break: break-all;
+       word-break: break-all;
+       word-break: break-word;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+          hyphens: auto;
+}
+@mixin disable-select {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+@mixin selection {
+	& ::selection {
+		@content;
+	}
+	& ::-moz-selection {
+		@content;
+	}
+}
+
+//BACKGROUND RGBA
+@mixin background-rgba($red: 0, $green: 0, $blue: 0, $alpha: 0.5){
+    background-color: rgb($red, $green, $blue);
+    background-color: rgba($red, $green, $blue, $alpha);
+    /*@if ($legacy-support-for-ie) {
+        @include has-layout;
+        background-color: transparent\9; $color: rgba($red, $green, $blue, $alpha);
+        @include filter-gradient($color, $color);
+    }*/
+}
+
+//BORDER IMAGE
+@mixin border-image($value) {
+  @include experimental(border-image, $value, -moz, -webkit, not -o, not -ms, not -khtml, official);
+}
+
+//BACKGROUND SIZE
+@mixin background-size($width: 100%, $height: 100%) {
+     -moz-background-size: $width $height;
+  -webkit-background-size: $width $height;
+          background-size: $width $height;
+}
+
+//ROTATE
+@mixin rotate($deg: 0, $m11: 0, $m12: 0, $m21: 0, $m22: 0) {
+     -moz-transform: rotate($deg + deg);
+       -o-transform: rotate($deg + deg);
+  -webkit-transform: rotate($deg + deg);
+      -ms-transform: rotate($deg + deg);
+          transform: rotate($deg + deg);
+             filter: progid:DXImageTransform.Microsoft.Matrix(
+                     M11=$m11, M12=$m12,M21=$m21, M22=$m22, sizingMethod='auto expand');
+               zoom: 1;
+}

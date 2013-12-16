@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+@import "compass/reset";
+@import "compass";
+
+// FONTS
+@font-face {
+  font-family: "Lobster";
+  src: url("../fonts/lobster_1.3-webfont.eot");
+  src: url("../fonts/lobster_1.3-webfont.eot?#iefix") format("embedded-opentype"),
+	     url("../fonts/lobster_1.3-webfont.svg") format("svg"),
+	     url("../fonts/lobster_1.3-webfont.woff") format("woff"),
+	     url("../fonts/lobster_1.3-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HelveticaNeueUL";
+  src: url("../fonts/helveticaneue-ultralight-webfont.eot");
+  src: url("../fonts/helveticaneue-ultralight-webfont.eot?#iefix") format("embedded-opentype"),
+	     url("../fonts/helveticaneue-ultralight-webfont.svg") format("svg"),
+	     url("../fonts/helveticaneue-ultralight-webfont.woff") format("woff"),
+	     url("../fonts/helveticaneue-ultralight-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// SPRITE
+$icons-spacing: 15px;
+$icons-layout: smart;
+@import "icons/*.png";
+
+/*body {
+  @include background-image(linear-gradient(left top,red ,darken(red, 15%)));
+
+}*/
+
+/////////////////////////////
+
+// VARIABLES
+$color-link: #0066CC;
+
+$color-priority-high: #ff0000;
+$color-priority-normal: orange;
+$color-priority-low: #FFD700;
+
+//$task-todo: #ff0000;
+//$task-done: #94CD4C;
+//$task-inprogress: #FFD700;
+
+$task-todo: #FFD700;
+$task-inprogress: orange;
+$task-done: #0066CC;
+
+$task-delete: #cc0000;
+
+// BORDER
+
+////////////////////////////
+
+// STYLE
+@import "mixin";
+@import "layout";
+@import "common";
+
+//@import "header";
+//@import "footer";
+
+// MAIN
+//@import "main";
+//@import "task";
+//@import "task-add";
+//@import "task-my";
+
+@import "launch";
+
+//@import "popup";
+//@import "awards";
+//@import "link-page";
+
+//@import "user";
+
+
+@import "task-model";
+@import "select2";
+
+@import "mediaqueries";
+
+//@import "test";
+
+

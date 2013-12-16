@@ -1,0 +1,13 @@
+CACHE MANIFEST
+
+CACHE:
+/static/stylesheets/normalize.css
+/static/stylesheets/screen.css
+/static/js/vendor/jquery-1.9.0.js 
+/static/js/vendor/underscore.js 
+/static/js/vendor/select2.js
+
+NETWORK:
+
+
+FALLBACK:
